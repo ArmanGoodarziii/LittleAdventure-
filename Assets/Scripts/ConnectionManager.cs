@@ -1,6 +1,5 @@
 using UnityEngine;
 using Photon.Pun;
-using UnityEditor.SearchService;
 using UnityEngine.SceneManagement;
 
 public class ConnectionManager : MonoBehaviourPunCallbacks
