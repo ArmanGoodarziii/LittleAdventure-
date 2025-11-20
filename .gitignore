@@ -1,0 +1,41 @@
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+
+# Visual Studio / Rider / IDE
+.vscode/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Packages (keep manifest files)
+!Packages/manifest.json
+!Packages/packages-lock.json
+
+# Project Settings (keep them)
+!ProjectSettings/
+
+# Crash Reports
+sysinfo.txt
+
+# Optional
+[Cc]ache/
+.plastic/
+ignore.conf
