@@ -11,6 +11,7 @@ public class PlayeroMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private PhotonView pv;
+    public GameObject cameraObject;
 
     [SerializeField]private float speed;
     [SerializeField]private float jump;
@@ -24,6 +25,7 @@ public class PlayeroMovement : MonoBehaviour
     private float xScale;
 
     public GameObject canvasObject;
+    public GameObject canvasButton;
     public float yPos;
     public Text userName;
 
@@ -63,6 +65,9 @@ public class PlayeroMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         xScale = transform.localScale.x;
+
+        PhotonNetwork.SendRate = 60;
+        PhotonNetwork.SerializationRate = 60;
     }
 
     // Update is called once per frame
@@ -74,6 +79,14 @@ public class PlayeroMovement : MonoBehaviour
         {
             rb.linearVelocityX = move * speed;
             HandleFlip();
+
+            cameraObject.SetActive(true);
+            canvasButton.SetActive(true);
+        }
+        else
+        {
+            cameraObject.SetActive(false);
+            canvasButton.SetActive(false);
         }
         HandleAnimations();
         isGrounded = Physics2D.Raycast(transform.position, Vector2.down, checkGroundDistance, layerGround);
