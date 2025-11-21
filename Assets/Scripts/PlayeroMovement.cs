@@ -3,7 +3,6 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
-using System.Runtime.InteropServices;
 
 public class PlayeroMovement : MonoBehaviour
 {
@@ -81,12 +80,11 @@ public class PlayeroMovement : MonoBehaviour
             HandleFlip();
 
             cameraObject.SetActive(true);
-            canvasButton.SetActive(true);
+            cameraObject.transform.position = Vector3.Lerp(cameraObject.transform.position , new Vector3(transform.position.x, transform.position.y , cameraObject.transform.position.z), 1 * Time.deltaTime);
         }
         else
         {
             cameraObject.SetActive(false);
-            canvasButton.SetActive(false);
         }
         HandleAnimations();
         isGrounded = Physics2D.Raycast(transform.position, Vector2.down, checkGroundDistance, layerGround);
