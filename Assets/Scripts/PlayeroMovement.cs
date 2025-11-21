@@ -67,6 +67,8 @@ public class PlayeroMovement : MonoBehaviour
 
         PhotonNetwork.SendRate = 60;
         PhotonNetwork.SerializationRate = 60;
+
+        userName.text = GetComponent<PhotonView>().Controller.NickName;
     }
 
     // Update is called once per frame
