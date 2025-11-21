@@ -371,6 +371,7 @@ GameObject:
   - component: {fileID: 6843267250106626279}
   - component: {fileID: 7116561932486276180}
   - component: {fileID: 5247968707756096009}
+  - component: {fileID: 4390751603521367161}
   - component: {fileID: 6938081032350371961}
   - component: {fileID: 1196568960991779721}
   - component: {fileID: 8453966097845538516}
@@ -479,6 +480,19 @@ MonoBehaviour:
   canvasButton: {fileID: 0}
   yPos: 0.91
   userName: {fileID: 4701686760171903975}
+--- !u!114 &4390751603521367161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2974725911938466863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f48171fe6c14384f85993c4473da152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallY: -1.25
 --- !u!70 &6938081032350371961
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

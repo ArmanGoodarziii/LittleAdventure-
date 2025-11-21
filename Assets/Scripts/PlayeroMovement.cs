@@ -130,4 +130,11 @@ public class PlayeroMovement : MonoBehaviour
     {
         Gizmos.DrawLine(transform.position, new Vector2(transform.position.x, transform.position.y - checkGroundDistance));
     }
+
+    public void StopMovement()
+    {
+        enabled = false;
+        GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+    }
+
 }
